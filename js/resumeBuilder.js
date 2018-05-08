@@ -201,7 +201,7 @@ function addProject(project) {
 	output += HTMLprojectDates.replace("%data%", project.dates);
 	output += HTMLprojectDescription.replace("%data%", project.description);
 
-	for (var i in project.images)
+	for (var i = 0; i < project.images.length; i++)
 		output += HTMLprojectImage.replace("%data%", project.images[i]);
 
 	$("#projects").append(HTMLprojectStart.replace("><", ">" + output + "<"));
